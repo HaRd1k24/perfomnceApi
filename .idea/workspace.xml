@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9a02649-59f7-42ad-a613-0ffae5437d4d" name="Default Changelist" comment="" />
+    <list default="true" id="a9a02649-59f7-42ad-a613-0ffae5437d4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Example.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +21,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1tOB7TAK4ay6piv6Dj7pGxnl7JZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,8 +33,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.Example">
+  <component name="RunManager" selected="JUnit.Example.getUser">
     <configuration name="Example" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="perfomnceApi" />
       <option name="PACKAGE_NAME" value="" />
@@ -78,10 +87,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Example" />
-        <item itemvalue="JUnit.Example.deleteLetter" />
         <item itemvalue="JUnit.Example.getUser" />
+        <item itemvalue="JUnit.Example" />
         <item itemvalue="JUnit.Example.acceptUser" />
+        <item itemvalue="JUnit.Example.deleteLetter" />
         <item itemvalue="JUnit.Example.delete" />
       </list>
     </recent_temporary>
@@ -96,5 +105,17 @@
       <updated>1622630087491</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
