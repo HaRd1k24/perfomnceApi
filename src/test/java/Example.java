@@ -17,18 +17,19 @@ public class Example {
     @DisplayName("Авторизация")
     public void getUser() {
         Map<String, String> map = new HashMap<>();
-        map.put("grant_type", "password");
-        map.put("client_id", "123");
-        map.put("client_secret", "234");
-        map.put("username", "lev-trapeznikov@mail.ru");
+
+        map.put("login", "lev-trapeznikov@mail.ru");
         map.put("password", "Eaa4HPpOyu2%");
+        map.put("saveauth","1");
+        map.put("token","33754969b51d40db8adeb5c8068c1b1b");
+        map.put("project","e.mail.ru");
 
         String response = given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
                 .body(map)
                 .when()
-                .post("https://appsmail.ru/oauth/token")
+                .post("https://auth.mail.ru/jsapi/auth")
                 .then().log().all().extract().asString();
         System.out.println(response);
     }
