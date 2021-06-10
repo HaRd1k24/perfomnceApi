@@ -21,7 +21,37 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1623337443" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1623336803" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectId" id="1tOB7TAK4ay6piv6Dj7pGxnl7JZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -87,10 +117,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Example.getUser" />
-        <item itemvalue="JUnit.Example" />
-        <item itemvalue="JUnit.Example.acceptUser" />
         <item itemvalue="JUnit.Example.deleteLetter" />
         <item itemvalue="JUnit.Example.delete" />
+        <item itemvalue="JUnit.Example.acceptUser" />
+        <item itemvalue="JUnit.Example" />
       </list>
     </recent_temporary>
   </component>
@@ -110,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623063168487</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="draft">
+      <created>1623260295983</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623260295983</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
