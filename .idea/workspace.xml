@@ -38,7 +38,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1623337443" />
+                    <option name="lastUsedInstant" value="1623339236" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
@@ -64,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.Example.getUser">
+  <component name="RunManager" selected="JUnit.Example">
     <configuration name="Example" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="perfomnceApi" />
       <option name="PACKAGE_NAME" value="" />
@@ -116,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Example" />
         <item itemvalue="JUnit.Example.getUser" />
+        <item itemvalue="JUnit.Example.acceptUser" />
         <item itemvalue="JUnit.Example.deleteLetter" />
         <item itemvalue="JUnit.Example.delete" />
-        <item itemvalue="JUnit.Example.acceptUser" />
-        <item itemvalue="JUnit.Example" />
       </list>
     </recent_temporary>
   </component>
