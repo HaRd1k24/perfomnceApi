@@ -62,7 +62,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="JUnit.Example">
     <configuration name="Example" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -74,31 +74,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Example.Auth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="perfomnceApi" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Example" />
+      <option name="METHOD_NAME" value="Auth" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Example.acceptUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="perfomnceApi" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Example" />
       <option name="METHOD_NAME" value="acceptUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Example.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="perfomnceApi" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Example" />
-      <option name="METHOD_NAME" value="delete" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Example.deleteLetter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="perfomnceApi" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Example" />
-      <option name="METHOD_NAME" value="deleteLetter" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -114,13 +104,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Example.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="perfomnceApi" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Example" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Example" />
+        <item itemvalue="JUnit.Example.Auth" />
+        <item itemvalue="JUnit.Example.test1" />
         <item itemvalue="JUnit.Example.getUser" />
         <item itemvalue="JUnit.Example.acceptUser" />
-        <item itemvalue="JUnit.Example.deleteLetter" />
-        <item itemvalue="JUnit.Example.delete" />
       </list>
     </recent_temporary>
   </component>
@@ -147,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623260295983</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="draft">
+      <created>1631366717306</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1631366717306</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -3,6 +3,7 @@ import io.restassured.authentication.OAuthSignature;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -21,33 +22,49 @@ public class Example {
     static String cookie1;
     static String cookie2;
 
-    @BeforeEach
+    @AfterEach
     @DisplayName("Get")
     void get() {
 
         Response response = (Response) given()
+
                 .when()
                 .get("https://mail.ru")
                 .then().statusCode(200).extract().response();
-        System.out.println(response.headers().toString());
+       
         System.out.println(cookie = response.getCookies() + " Cookie");
     }
+    
 
     @Test
     void Auth() {
         System.out.println("Авторизация");
         RestAssured.baseURI = "https://auth.mail.ru".concat("/jsapi/auth");
         ValidatableResponse response = RestAssured.given()
-                .auth()
-                .basic("leva.trapeznikova@mail.ru", "Oneninenine8")
-                .queryParam("saveauth", "1")
+                .contentType(ContentType.JSON).accept(ContentType.JSON)
+                .formParam("login","leva.trapeznikov@mail.ru")
+                .formParam("password","Oneninenine8")
+                .formParam("saveauth", "1")
+                // .formParam("token","c9c4a762d0fa474dbb339ee95ea80312")
+                .formParam("project","e.mail.ru")
+
                 .post()
-                .then().statusCode(200);
+                .then();
 
 
         System.out.println(response.extract().body().asString());
       /*  str = response.extract().body().path("act");
         mrcu = response.extract().body().path("mrcu");*/
+
+    }
+
+    @BeforeEach
+    public void Delete(){
+        RestAssured.baseURI = "https://e.mail.ru".concat("/messages/inbox/?back=1");
+        ValidatableResponse response2 = RestAssured.given().contentType(ContentType.JSON).accept(ContentType.JSON)
+                .queryParam("back","1")
+                .when().get().then().statusCode(200);
+        System.out.println(response2.extract().headers().toString());
 
     }
 
