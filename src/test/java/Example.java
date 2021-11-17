@@ -10,16 +10,18 @@ import static io.restassured.RestAssured.baseURI;
 public class Example {
     static Properties properties = new Properties();
     private final static String posts = "posts";
+    private final static String todos = "todos/15"; //  todos = id можно получить определенного юзера
     private final static String cnt = "/1";
     private final static String url = "http://jsonplaceholder.typicode.com/";
 
     @Test
     void getUp() {
-
+        JSONObject jsonObject = new JSONObject();
         ValidatableResponse response2 = RestAssured.given()
                 .baseUri(url)
-                .accept(ContentType.JSON)
-                .get(posts)
+                .contentType(ContentType.JSON)
+                .body(jsonObject)
+                .get(todos)
                 .then().statusCode(200);
 
         System.out.println(response2.extract().body().asString());
