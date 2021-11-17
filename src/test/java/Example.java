@@ -1,26 +1,25 @@
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.http.Cookie;
-import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import org.json.JSONObject;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import java.util.Properties;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.baseURI;
 
 public class Example {
+    static Properties properties = new Properties();
+    private final static String posts = "posts";
+    private final static String cnt = "/1";
+    private final static String url = "http://jsonplaceholder.typicode.com/";
 
     @Test
     void getUp() {
-        RestAssured.baseURI = "http://jsonplaceholder.typicode.com".concat("/posts");
+
         ValidatableResponse response2 = RestAssured.given()
+                .baseUri(url)
                 .accept(ContentType.JSON)
-                .get()
+                .get(posts)
                 .then().statusCode(200);
 
         System.out.println(response2.extract().body().asString());
@@ -32,12 +31,12 @@ public class Example {
         jsonObject.put("title", "PL");
         jsonObject.put("body", "PL");
         jsonObject.put("userId", 1);
-        RestAssured.baseURI = "http://jsonplaceholder.typicode.com".concat("/posts");
         ValidatableResponse response2 = RestAssured.given()
+                .baseUri(url)
                 .contentType(ContentType.JSON)
                 .body(jsonObject.toString())
                 .headers("content-type", "application/json")
-                .post()
+                .post(posts)
                 .then().statusCode(201);
 
         System.out.println(response2.extract().body().asString());
@@ -46,16 +45,16 @@ public class Example {
     @Test
     void put() {
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("title", "321");
-        jsonObject.put("body", "321");
+        jsonObject.put("title", "put");
+        jsonObject.put("body", "put");
         jsonObject.put("userId", 1);
         jsonObject.put("id", 1);
-        RestAssured.baseURI = "http://jsonplaceholder.typicode.com".concat("/posts");
         ValidatableResponse response2 = RestAssured.given()
+                .baseUri(url)
                 .contentType(ContentType.JSON)
                 .body(jsonObject.toString())
                 .headers("content-type", "application/json")
-                .post()
+                .post(posts)
                 .then().statusCode(201);
 
         System.out.println(response2.extract().body().asString());
@@ -69,12 +68,12 @@ public class Example {
         jsonObject.put("userId", 1);
         jsonObject.put("id", "5");
 
-        RestAssured.baseURI = "http://jsonplaceholder.typicode.com".concat("/posts/1");
         ValidatableResponse response2 = RestAssured.given()
+                .baseUri(url)
                 .contentType(ContentType.JSON)
                 .body(jsonObject.toString())
                 .headers("content-type", "application/json")
-                .patch()
+                .patch(posts.concat(cnt))
                 .then().statusCode(200);
 
         System.out.println(response2.extract().body().asString());
@@ -82,9 +81,10 @@ public class Example {
 
     @Test
     void delete() {
-        RestAssured.baseURI = "http://jsonplaceholder.typicode.com".concat("/posts/1");
-        ValidatableResponse response2 = RestAssured.given()
-                .delete()
+        ValidatableResponse response2 = (ValidatableResponse) RestAssured.given()
+                .baseUri(url)
+                .contentType(ContentType.JSON)
+                .delete(posts.concat(cnt))
                 .then().statusCode(200);
 
         System.out.println(response2.extract().body().asString());
