@@ -1,95 +1,117 @@
-import io.restassured.RestAssured;
+import entity.User;
+import entity.UserAlbumId;
 import io.restassured.http.ContentType;
-import io.restassured.response.ValidatableResponse;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
-import java.util.Properties;
+import service.DBService;
 
-import static io.restassured.RestAssured.baseURI;
+import java.sql.SQLException;
+import java.util.List;
+
+import static io.restassured.RestAssured.given;
+
 
 public class Example {
-    static Properties properties = new Properties();
     private final static String posts = "posts";
-    private final static String todos = "todos/15"; //  todos = id можно получить определенного юзера
-    private final static String cnt = "/1";
+    private final static String todos = "todos/6"; //  todos = id можно получить определенного юзера
+    private final static String cnt = "/10";
     private final static String url = "http://jsonplaceholder.typicode.com/";
+    private final static String album = "photos/5";
+
+    private final DBService dbService = new DBService();
 
     @Test
-    void getUp() {
-        JSONObject jsonObject = new JSONObject();
-        ValidatableResponse response2 = RestAssured.given()
+    void getAlbum() throws SQLException, ClassNotFoundException {
+        UserAlbumId as =  given()
                 .baseUri(url)
                 .contentType(ContentType.JSON)
-                .body(jsonObject)
-                .get(todos)
-                .then().statusCode(200);
-
-        System.out.println(response2.extract().body().asString());
+                .headers("content-type", "application/json")
+                .get(album)
+                .then().extract().as(UserAlbumId.class);
+        dbService.saveAlbum( as);
     }
 
     @Test
-    void create() {
+    void getUp() throws SQLException, ClassNotFoundException {
+        User user = given()
+                .baseUri(url)
+                .contentType(ContentType.JSON)
+                .get(todos)
+                .then().extract().as(User.class);
+        System.out.println(user.toString());
+        dbService.save(user);
+
+    }
+
+
+    @Test
+    void create() throws SQLException, ClassNotFoundException {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("title", "PL");
         jsonObject.put("body", "PL");
-        jsonObject.put("userId", 1);
-        ValidatableResponse response2 = RestAssured.given()
+        jsonObject.put("completed", "PL");
+        jsonObject.put("id", 35);
+        User as = given()
                 .baseUri(url)
                 .contentType(ContentType.JSON)
                 .body(jsonObject.toString())
                 .headers("content-type", "application/json")
                 .post(posts)
-                .then().statusCode(201);
+                .then().extract().as(User.class);
+        dbService.save(as);
 
-        System.out.println(response2.extract().body().asString());
     }
 
     @Test
-    void put() {
+    void put() throws SQLException, ClassNotFoundException {
+
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("title", "put");
-        jsonObject.put("body", "put");
-        jsonObject.put("userId", 1);
-        jsonObject.put("id", 1);
-        ValidatableResponse response2 = RestAssured.given()
+        jsonObject.put("completed", "put");
+        jsonObject.put("id", 100);
+        User as = given()
                 .baseUri(url)
                 .contentType(ContentType.JSON)
                 .body(jsonObject.toString())
                 .headers("content-type", "application/json")
-                .post(posts)
-                .then().statusCode(201);
+                .put(posts.concat(cnt))
+                .then().extract().as(User.class);
 
-        System.out.println(response2.extract().body().asString());
+        System.out.println(as.toString());
+        dbService.put(2, as);
     }
 
     @Test
-    void patch() {
+    void patch() throws SQLException, ClassNotFoundException {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("title", "patch");
+        jsonObject.put("completed", "path");
         jsonObject.put("body", "path");
-        jsonObject.put("userId", 1);
         jsonObject.put("id", "5");
-
-        ValidatableResponse response2 = RestAssured.given()
+        User as = given()
                 .baseUri(url)
                 .contentType(ContentType.JSON)
                 .body(jsonObject.toString())
                 .headers("content-type", "application/json")
                 .patch(posts.concat(cnt))
-                .then().statusCode(200);
+                .then().extract().as(User.class);
+        dbService.put(5, as);
+        System.out.println(as.toString());
 
-        System.out.println(response2.extract().body().asString());
     }
 
     @Test
-    void delete() {
-        ValidatableResponse response2 = (ValidatableResponse) RestAssured.given()
+    void delete() throws SQLException, ClassNotFoundException {
+        User as = given()
                 .baseUri(url)
                 .contentType(ContentType.JSON)
                 .delete(posts.concat(cnt))
-                .then().statusCode(200);
+                .then().extract().as(User.class);
 
-        System.out.println(response2.extract().body().asString());
+        dbService.delete(5, as);
+
+        System.out.println(as);
     }
+
 
 }

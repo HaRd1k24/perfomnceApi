@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9a02649-59f7-42ad-a613-0ffae5437d4d" name="Default Changelist" comment="draft">
+    <list default="true" id="a9a02649-59f7-42ad-a613-0ffae5437d4d" name="Default Changelist" comment="test">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/entity/UserAlbumId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/repository/DataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/DBService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Example.java" afterDir="false" />
     </list>
@@ -23,10 +30,19 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -53,62 +69,85 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="C:\Users\79013\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1tOB7TAK4ay6piv6Dj7pGxnl7JZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mysql-connector-java-8.0.27" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager" selected="JUnit.Example">
-    <configuration name="Example" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Example.getAlbum">
+    <configuration name="Example.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="perfomnceApi" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Example" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Example.Auth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="perfomnceApi" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Example" />
-      <option name="METHOD_NAME" value="Auth" />
+      <option name="METHOD_NAME" value="create" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Example.acceptUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Example.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="perfomnceApi" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Example" />
-      <option name="METHOD_NAME" value="acceptUser" />
+      <option name="METHOD_NAME" value="delete" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Example.getUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Example.getAlbum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="perfomnceApi" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Example" />
-      <option name="METHOD_NAME" value="getUser" />
+      <option name="METHOD_NAME" value="getAlbum" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Example.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Example.getUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="perfomnceApi" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Example" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="METHOD_NAME" value="getUp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Example.patch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="perfomnceApi" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Example" />
+      <option name="METHOD_NAME" value="patch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Example" />
-        <item itemvalue="JUnit.Example.Auth" />
-        <item itemvalue="JUnit.Example.test1" />
-        <item itemvalue="JUnit.Example.getUser" />
-        <item itemvalue="JUnit.Example.acceptUser" />
+        <item itemvalue="JUnit.Example.getAlbum" />
+        <item itemvalue="JUnit.Example.create" />
+        <item itemvalue="JUnit.Example.delete" />
+        <item itemvalue="JUnit.Example.patch" />
+        <item itemvalue="JUnit.Example.getUp" />
       </list>
     </recent_temporary>
   </component>
@@ -132,6 +171,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1622630087491</updated>
+      <workItem from="1637694663607" duration="76000" />
+      <workItem from="1637694761981" duration="4277000" />
+      <workItem from="1637863116097" duration="17000" />
+      <workItem from="1637863313085" duration="1000" />
+      <workItem from="1638441528624" duration="3141000" />
+      <workItem from="1638475460567" duration="1543000" />
+      <workItem from="1638537572858" duration="1619000" />
+      <workItem from="1638540155386" duration="5149000" />
+      <workItem from="1638701890191" duration="12417000" />
     </task>
     <task id="LOCAL-00001" summary="draft">
       <created>1623063168487</created>
@@ -154,8 +202,53 @@
       <option name="project" value="LOCAL" />
       <updated>1631366717306</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="draft">
+      <created>1632862768579</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1632862768579</updated>
+    </task>
+    <task id="LOCAL-00005" summary="draft">
+      <created>1633274454928</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1633274454928</updated>
+    </task>
+    <task id="LOCAL-00006" summary="draft">
+      <created>1633274786098</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1633274786098</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test">
+      <created>1637180760779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637180760779</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test">
+      <created>1637183208507</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637183208507</updated>
+    </task>
+    <task id="LOCAL-00009" summary="test">
+      <created>1637184072046</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1637184072046</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -170,7 +263,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="draft" />
-    <option name="LAST_COMMIT_MESSAGE" value="draft" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
