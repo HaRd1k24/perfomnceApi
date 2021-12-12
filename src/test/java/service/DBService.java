@@ -12,8 +12,7 @@ import java.sql.SQLException;
 public class DBService {
 
     public void save(User user) throws SQLException, ClassNotFoundException {
-        Connection connection = DataBase.getSQL();
-
+        Connection connection = DataBase.getConnection();
 
         String sql = " insert into USERS (" +
                 "id, title, completed,body) values (?, ?, ?, ?)";
@@ -37,8 +36,7 @@ public class DBService {
     }
 
     public void saveAlbum(UserAlbumId userAlbumId) throws SQLException, ClassNotFoundException {
-        Connection connection = DataBase.getSQL();
-
+        Connection connection = DataBase.getConnection();
 
         String sql = " insert into AlbumIdUser (" +
                 "id, title, url,thumbnailUrl) values(?, ?, ?, ?)";
@@ -46,7 +44,7 @@ public class DBService {
             preparedStatement.setInt(1, userAlbumId.getId());
             preparedStatement.setString(2, userAlbumId.getTitle());
             preparedStatement.setString(3, userAlbumId.getUrl());
-            preparedStatement.setString(4,userAlbumId.getThumbnailUrl());
+            preparedStatement.setString(4, userAlbumId.getThumbnailUrl());
             preparedStatement.execute();
 
             connection.close();
@@ -58,9 +56,8 @@ public class DBService {
     }
 
 
-
     public void put(int id, User user) throws SQLException, ClassNotFoundException {
-        Connection connection = DataBase.getSQL();
+        Connection connection = DataBase.getConnection();
         User getUser = getUser(id);
         getUser.setId(user.getId());
         getUser.setTitle(user.getTitle());
@@ -88,21 +85,21 @@ public class DBService {
     }
 
     public User getUser(int id) throws SQLException, ClassNotFoundException {
-        Connection sql = DataBase.getSQL();
+        Connection sql = DataBase.getConnection();
         ResultSet set = sql.createStatement().executeQuery("select * from USERS where id = '" + id + "'");
         User user = new User();
         while (set.next()) {
             user.setId(set.getInt("id"));
             user.setTitle(set.getString("title"));
             user.setCompleted(set.getString("completed"));
+
         }
         return user;
     }
 
-    public void delete(int id, User user) throws SQLException, ClassNotFoundException {
-        Connection connection = DataBase.getSQL();
+    public void delete(int id) throws SQLException, ClassNotFoundException {
+        Connection connection = DataBase.getConnection();
         PreparedStatement preparedStatement = connection.prepareStatement("delete from USERS WHERE id = '" + id + "'");
-
 
         preparedStatement.execute();
 
