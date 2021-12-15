@@ -11,6 +11,10 @@ import java.sql.SQLException;
 
 public class DBService {
 
+    /**
+     * Данный метод получает коннект к БД и сохраняет юзера
+     */
+
     public void save(User user) throws SQLException, ClassNotFoundException {
         Connection connection = DataBase.getConnection();
 
@@ -34,6 +38,9 @@ public class DBService {
         }
 
     }
+    /**
+     * Данный метод получает коннект к БД и сохраняет ссылки на картинки
+     */
 
     public void saveAlbum(UserAlbumId userAlbumId) throws SQLException, ClassNotFoundException {
         Connection connection = DataBase.getConnection();
@@ -55,6 +62,9 @@ public class DBService {
 
     }
 
+    /**
+     * Данный метод получает коннект к БД и айдейтить юзера
+     */
 
     public void put(int id, User user) throws SQLException, ClassNotFoundException {
         Connection connection = DataBase.getConnection();
@@ -84,6 +94,10 @@ public class DBService {
 
     }
 
+    /**
+     * Данный метод получает коннект к БД и получает определенного юзера
+     */
+
     public User getUser(int id) throws SQLException, ClassNotFoundException {
         Connection sql = DataBase.getConnection();
         ResultSet set = sql.createStatement().executeQuery("select * from USERS where id = '" + id + "'");
@@ -96,6 +110,10 @@ public class DBService {
         }
         return user;
     }
+
+    /**
+     * Данный метод получает коннект к БД и удаляет определенного юзера
+     */
 
     public void delete(int id) throws SQLException, ClassNotFoundException {
         Connection connection = DataBase.getConnection();
