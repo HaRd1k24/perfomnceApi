@@ -1,3 +1,5 @@
+package apiTest;
+
 import restStepsDefs.JsonPlaceholderApi;
 import entity.User;
 import entity.UserAlbumId;
@@ -8,7 +10,7 @@ import java.sql.SQLException;
 
 
 
-public class ApiTest {
+public class JsonPlaceHolderTest {
     private final DBService dbService = new DBService();
     JsonPlaceholderApi api = new JsonPlaceholderApi();
     User user = new User();
